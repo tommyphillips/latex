@@ -1,0 +1,2 @@
+Control words take the form @code{\[AZaz]*}.@*
+A starred command is an asterisked control word.

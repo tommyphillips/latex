@@ -1,0 +1,4 @@
+Use @code{texdoc} to search for documentation when exploring:@*
+
+  @code{texdoc <package>}@*
+  @code{texdoc -l <package>}    lists all available documentation@*

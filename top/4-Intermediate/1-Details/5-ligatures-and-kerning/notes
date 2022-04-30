@@ -1,0 +1,8 @@
+@verbatim
+man\oe uvre
+man\oe{}uvre
+man{\oe}uvre (not recommended - can affect kerning)
+
+\ae, \oe, \aa, \l, \o, \ss, fi, ffi, fl, ffl
+@end verbatim
+

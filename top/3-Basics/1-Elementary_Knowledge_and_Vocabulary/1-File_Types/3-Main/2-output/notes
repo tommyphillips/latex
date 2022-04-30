@@ -1,0 +1,2 @@
+The @code{latex} application reads source code and creates a typeset document, the output file.@*
+See @ref{Compilation} for commands that compile @code{latex} source code into the various output formats.

@@ -1,0 +1,5 @@
+@code{tex} originally created @file{dvi} files, which can be converted to postscript.@*
+@file{pdf}s are a similar file format, with extra facilities for embedded images and rotation.  
+@file{pdf}s are now the default choice over @file{dvi}s.@*
+
+@code{pdftex} allows us to create @file{pdf}s from @code{tex}.@*

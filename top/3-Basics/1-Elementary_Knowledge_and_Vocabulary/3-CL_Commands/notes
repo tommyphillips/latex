@@ -1,0 +1,9 @@
+@itemize
+@item @code{texdoc}
+@item @code{pdflatex}
+@item @code{latex}
+@item @code{bibtex}
+@item @code{makeindex}
+@item @code{xindy}
+@item @code{kpsewhich}
+@end itemize

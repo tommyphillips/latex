@@ -1,0 +1,19 @@
+graphicx - importing images
+
+\usepackage[<<options>>]{graphicx}      <<options>> = final(default)|draft  hiderotate  hidescale
+\includegraphics[<<key=val>>]{<base filename>}     creates an inline box line \begin{tabular}
+  angle=
+  width=
+  height=\textheight
+  scale=
+  trim=<l> <b> <r> <t>    trims/crops that much from each side
+  draft=                  only imports the frame of the image
+
+graphical transformations
+  \rotatebox[<<options>>]{<angle>}{<text>}      
+    units=-360  clockwise degrees   units=  anticlockwise radians
+    origin=(l|r|c)(t|b|B)       B is baseline
+  \scalebox
+  \reflectbox
+  \resizebox
+

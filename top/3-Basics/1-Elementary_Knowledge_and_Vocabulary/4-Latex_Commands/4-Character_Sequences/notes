@@ -1,0 +1,6 @@
+Some sequences of characters form an instruction of their own.@*
+For example:
+@itemize
+@item @code{ffi} is the @code{ffi} ligature
+@item @code{!'} is the upside down @code{!}
+@end itemize

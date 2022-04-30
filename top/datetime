@@ -1,0 +1,6 @@
+DATETIME 
+  redefines \today and defines \currenttime in accordance with options:
+    short, nodayofweek, level, ddmmyyyy, 12hr, 24hr
+  the ddmmyy option can also be provided later as declarations: \yyyymmdddate
+  texdoc datetime
+

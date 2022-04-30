@@ -1,0 +1,2 @@
+@code{\footnote} is a control word, taking one mandatory argument, that specifies the contents of the footnote.@*
+@code{\chapter} is a control word that starts a new chapter, taking the chapter name as a mandatory argument.

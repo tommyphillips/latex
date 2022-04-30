@@ -1,0 +1,19 @@
+Bibliography
+  external tools such as bibtex and biber are used to automatically generate bibliography environments
+  their use is covered in the next book
+  for now, lets consider manually creating a bibliography environment
+
+@verbatim
+  \begin{thebibliography}{<widest tag>}
+  \bibitem[<<tag>>]{<unique>}
+  \end{thebibliography}
+@end verbatim
+
+  depending on the document class, either \bibname prints the word Bibliography or \refname prints the word References
+  thebibliography environment automatically invokes either \bibname or \refname to print the header, and then prints the bibitems
+
+  most classes dont add bib to TOC
+  KOMA-Script option bibliography=totoc|totocnumbered
+
+  @code{\cite[<<text>>]@{<unique>@}} cites the reference
+

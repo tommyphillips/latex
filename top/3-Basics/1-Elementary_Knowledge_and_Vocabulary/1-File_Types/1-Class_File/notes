@@ -1,0 +1,7 @@
+@file{.cls} defines a particular type of document, by setting its:
+@itemize
+@item page layout
+@item heading styles
+@item commands 
+@item environments
+@end itemize

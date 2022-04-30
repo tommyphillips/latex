@@ -1,0 +1,5 @@
+Abstract
+  abstracts are created in the abstrac environment
+  some class files dont have an abstract environment
+  the abstract environment should go after the \maketitle command
+

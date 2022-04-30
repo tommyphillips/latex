@@ -1,0 +1,7 @@
+Hyphenation line breaks
+  tex has an excellent hyphenation algo designed for english@*
+  use babel package for foreign language hyphenation algos@*
+  if tex needs help to find a good hyphenation, we can provide this as@*
+  1. \hyphenation@{gal-axy@}@*
+  2. gal\-axy@*
+

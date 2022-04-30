@@ -1,0 +1,5 @@
+
+Perl
+  tex comes with helper applications such as texdoc@*
+  some of these are written in perl@*
+  perl scripts for tex include pdfcrop, epstopdf, xindy, texcount (wordcount), latexmk (runs latex and bitex repeately to update document)

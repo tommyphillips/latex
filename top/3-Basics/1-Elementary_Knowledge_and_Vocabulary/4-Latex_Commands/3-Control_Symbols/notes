@@ -1,0 +1,6 @@
+A control symbol is a @code{\} followed by a non-alphabet symbol.@*
+Because we know the length of a control symbol is one, we don't need a space to signal the end.
+Therefore, whitespace after a control symbol is significant.@*
+
+Starred control symbols are a special type of control symbol.@* 
+For example, @code{\\*} forces line break that cannot go over a page.

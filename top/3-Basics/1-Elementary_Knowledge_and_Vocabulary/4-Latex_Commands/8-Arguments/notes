@@ -1,0 +1,5 @@
+Some commands take mandatory or optional arguments.@*
+This gives @code{latex} additional information in order to carry out the command.@*
+The first token (non whitespace) following the command is the first argument.
+Hence we usually specify the argument as a group.@*
+An empty (mandatory) argument is specified with @{@}.@*

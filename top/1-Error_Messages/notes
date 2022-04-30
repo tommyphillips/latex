@@ -1,0 +1,8 @@
+Some error messages will be @code{latex} messages, others @code{tex} messages.
+
+When we run @code{latex}, if we get an error, we enter debugging mode.
+
+Error 1:@*
+undefined control serquence means latex didnt recognise the command
+at the @code{?} prompt we may type @code{x} to quit debugging, @code{h} for help.
+

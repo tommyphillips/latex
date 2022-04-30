@@ -1,0 +1,12 @@
+french spacing uses 1 standard space@*
+english spacing uses 1 en-space (slightly larger than 1 standard space)@*
+tex defaults to english, which is better@*
+\frenchspacing \nonfrenchspacing  declare toggle french spacing@*
+
+if we have a . ? or !, but it is not at the end of a sentence, then we must escape the en space@*
+eg  e.g.\ like this@*
+if a we have a capital letter followed by . ? or !, latex assumes it is not the end of the sentence, so we must escape it@*
+eg Yesterday, I saw my G.P\@@.@*
+
+Note: in a typewriter font, \nonfrenchspacing uses a double-space to simulate the en space@*
+

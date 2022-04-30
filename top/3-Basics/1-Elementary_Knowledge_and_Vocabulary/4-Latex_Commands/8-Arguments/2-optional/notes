@@ -1,0 +1,15 @@
+Optional commands are enclosed in @code{[]}.@*
+Commands with both optional and mandatory arguments generally take the optional ones first.@*
+
+For example, the control symbol @code{\\} takes an optional argument controlling 
+the spacing between the lines: @code{\\[1pt]}.@*
+
+
+
+
+
+
+
+
+
+

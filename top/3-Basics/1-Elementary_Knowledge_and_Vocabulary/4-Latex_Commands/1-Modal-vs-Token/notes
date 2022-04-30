@@ -1,0 +1,13 @@
+Modal commands are effective for the remainder of their block. They can be localised with:
+@itemize
+@item Standard grouping - @code{@{\itshape <text>@}} 
+@item Environment grouping - @code{\begin@{itshape@}<text>\end@{itshape@}}
+@end itemize
+
+Token commands operate on a set number of mandatory arguments/tokens following the command.
+For example, token commands with a mandatory argument take the next token as their argument.
+Usually, this token is a @code{@{@}} block.
+
+@subsubheading Note
+Commands expecting no argument interpret @code{@{@}} as simply a block occuring after the command was made.@*
+This can be used to create 'meaningful' whitespace after such a command. eg @code{\lambda@{@}}. 

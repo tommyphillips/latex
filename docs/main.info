@@ -1,0 +1,1006 @@
+This is filename.info, produced by makeinfo version 4.8 from main.texi.
+
+
+File: filename.info,  Node: Top,  Up: (dir)
+
+top
+***
+
+* Menu:
+
+* Error Messages ::
+* Introduction ::
+* Basics ::
+* Intermediate ::
+
+
+File: filename.info,  Node: Error Messages,  Next: Introduction,  Up: Top
+
+1 Error Messages
+****************
+
+Some error messages will be `latex' messages, others `tex' messages.
+
+   When we run `latex', if we get an error, we enter debugging mode.
+
+   Error 1:
+undefined control serquence means latex didnt recognise the command at
+the `?' prompt we may type `x' to quit debugging, `h' for help.
+
+
+File: filename.info,  Node: Introduction,  Next: Basics,  Prev: Error Messages,  Up: Top
+
+2 Introduction
+**************
+
+* Menu:
+
+* Compilation ::
+* CTAN ::
+* Documentation ::
+* Further Resources ::
+
+
+File: filename.info,  Node: Compilation,  Next: CTAN,  Up: Introduction
+
+2.1 Compilation
+===============
+
+source code -> `pdflatex' -> `.pdf'
+source code -> `latex2html' -> `.html'
+
+File: filename.info,  Node: CTAN,  Next: Documentation,  Prev: Compilation,  Up: Introduction
+
+2.2 CTAN
+========
+
+The CTAN provides classes and packages made by the community, ranging
+in complexity and documentation.  We can only consider a handfull.
+
+
+File: filename.info,  Node: Documentation,  Next: Further Resources,  Prev: CTAN,  Up: Introduction
+
+2.3 Documentation
+=================
+
+Use `texdoc' to search for documentation when exploring:
+`texdoc <package>'
+`texdoc -l <package>'    lists all available documentation
+
+File: filename.info,  Node: Further Resources,  Prev: Documentation,  Up: Introduction
+
+2.4 Further Resources
+=====================
+
+   * List of TeX Frequently Asked Questions
+
+   * Latex: A document preparation system - Leslie Lamport
+
+   * A guide to latex
+
+   * The latex companion
+
+   * The latex graphics companion
+
+   * The latex web companion
+
+   * Latex beginner's guide
+
+   * Latex and friends
+
+   * CTAN
+
+
+File: filename.info,  Node: Basics,  Next: Intermediate,  Prev: Introduction,  Up: Top
+
+3 Basics
+********
+
+* Menu:
+
+* Elementary Knowledge and Vocabulary ::
+* Document Structure ::
+* environments ::
+* Boxes and Minipages ::
+* Cross Referencing ::
+* Multilingual Support ::
+
+
+File: filename.info,  Node: Elementary Knowledge and Vocabulary,  Next: Document Structure,  Up: Basics
+
+3.1 Elementary Knowledge and Vocabulary
+=======================================
+
+* Menu:
+
+* File Types ::
+* Development Environments ::
+* CL Commands ::
+* Latex Commands ::
+* Interpretation of Source ::
+
+
+File: filename.info,  Node: File Types,  Next: Development Environments,  Up: Elementary Knowledge and Vocabulary
+
+3.1.1 File Types
+----------------
+
+* Menu:
+
+* Class File ::
+* Style File ::
+* Main ::
+* Helper ::
+
+
+File: filename.info,  Node: Class File,  Next: Style File,  Up: File Types
+
+3.1.1.1 Class File
+..................
+
+`.cls' defines a particular type of document, by setting its:
+   * page layout
+
+   * heading styles
+
+   * commands
+
+   * environments
+
+
+File: filename.info,  Node: Style File,  Next: Main,  Prev: Class File,  Up: File Types
+
+3.1.1.2 Style File
+..................
+
+Packages (`.sty' files) (re)define commands
+
+   Packages are imported via: `\usepackage[<<options>>]{<package>}'
+Applicable class options will also be passed to the package
+
+   To learn about new packages, *note Documentation::.
+To download and install packages, <Ref Appdx A>.
+
+File: filename.info,  Node: Main,  Next: Helper,  Prev: Style File,  Up: File Types
+
+3.1.1.3 Main
+............
+
+* Menu:
+
+* source ::
+* output ::
+* DVI ::
+
+
+File: filename.info,  Node: source,  Next: output,  Up: Main
+
+source
+......
+
+The source code refers to all the text (including latex commands) that
+make up a document, saved with extension `.tex'.
+This may be split across several files.
+
+File: filename.info,  Node: output,  Next: DVI,  Prev: source,  Up: Main
+
+output
+......
+
+The `latex' application reads source code and creates a typeset
+document, the output file.
+See *Note Compilation:: for commands that compile `latex' source code
+into the various output formats.
+
+
+File: filename.info,  Node: DVI,  Prev: output,  Up: Main
+
+DVI
+...
+
+`tex' originally created `dvi' files, which can be converted to
+postscript.
+`pdf's are a similar file format, with extra facilities for embedded
+images and rotation.  `pdf's are now the default choice over `dvi's.
+`pdftex' allows us to create `pdf's from `tex'.
+
+File: filename.info,  Node: Helper,  Prev: Main,  Up: File Types
+
+3.1.1.4 Helper
+..............
+
+Other types of file may be created in certain situations.
+
+* Menu:
+
+* aux ::
+* synctex ::
+* log ::
+* toc ::
+* lot ::
+
+
+File: filename.info,  Node: aux,  Next: synctex,  Up: Helper
+
+aux
+...
+
+Contains info for cross-referencing.
+See detailed discussion of cross-referencing and multiple runs.
+
+
+File: filename.info,  Node: synctex,  Next: log,  Prev: aux,  Up: Helper
+
+synctex
+.......
+
+Enables jumping between corresponding points of source code and output
+file.
+
+File: filename.info,  Node: log,  Next: toc,  Prev: synctex,  Up: Helper
+
+log
+...
+
+
+File: filename.info,  Node: toc,  Next: lot,  Prev: log,  Up: Helper
+
+toc
+...
+
+
+File: filename.info,  Node: lot,  Prev: toc,  Up: Helper
+
+lot
+...
+
+
+File: filename.info,  Node: Development Environments,  Next: CL Commands,  Prev: File Types,  Up: Elementary Knowledge and Vocabulary
+
+3.1.2 Development Environments
+------------------------------
+
+* Menu:
+
+* vim ::
+* Emacs ::
+* Front-End ::
+
+
+File: filename.info,  Node: vim,  Next: Emacs,  Up: Development Environments
+
+3.1.2.1 vim
+...........
+
+
+File: filename.info,  Node: Emacs,  Next: Front-End,  Prev: vim,  Up: Development Environments
+
+3.1.2.2 Emacs
+.............
+
+
+File: filename.info,  Node: Front-End,  Prev: Emacs,  Up: Development Environments
+
+3.1.2.3 Front-End
+.................
+
+A front-end is a piece of software that provides facilities for:
+
+   * writing source code
+
+   * passing source code to a latex application
+
+   * viewing the output file
+
+
+File: filename.info,  Node: CL Commands,  Next: Latex Commands,  Prev: Development Environments,  Up: Elementary Knowledge and Vocabulary
+
+3.1.3 CL Commands
+-----------------
+
+   * `texdoc'
+
+   * `pdflatex'
+
+   * `latex'
+
+   * `bibtex'
+
+   * `makeindex'
+
+   * `xindy'
+
+   * `kpsewhich'
+
+
+File: filename.info,  Node: Latex Commands,  Next: Interpretation of Source,  Prev: CL Commands,  Up: Elementary Knowledge and Vocabulary
+
+3.1.4 Latex Commands
+--------------------
+
+commands tell latex what to do at a particula rpoint in a document
+commands can take the following basic forms:
+
+* Menu:
+
+* Modal-vs-Token ::
+* Control Words ::
+* Control Symbols ::
+* Character Sequences ::
+* Internal Commands ::
+* Short and Long Commands ::
+* Declarations ::
+* Arguments ::
+* Preamble ::
+
+
+File: filename.info,  Node: Modal-vs-Token,  Next: Control Words,  Up: Latex Commands
+
+3.1.4.1 Modal-vs-Token
+......................
+
+Modal commands are effective for the remainder of their block. They can
+be localised with:
+   * Standard grouping - `{\itshape <text>}'
+
+   * Environment grouping - `\begin{itshape}<text>\end{itshape}'
+
+   Token commands operate on a set number of mandatory arguments/tokens
+following the command.  For example, token commands with a mandatory
+argument take the next token as their argument.  Usually, this token is
+a `{}' block.
+
+Note
+....
+
+Commands expecting no argument interpret `{}' as simply a block
+occuring after the command was made.
+This can be used to create 'meaningful' whitespace after such a
+command. eg `\lambda{}'.
+
+
+File: filename.info,  Node: Control Words,  Next: Control Symbols,  Prev: Modal-vs-Token,  Up: Latex Commands
+
+3.1.4.2 Control Words
+.....................
+
+Control words take the form `\[AZaz]*'.
+A starred command is an asterisked control word.
+
+
+File: filename.info,  Node: Control Symbols,  Next: Character Sequences,  Prev: Control Words,  Up: Latex Commands
+
+3.1.4.3 Control Symbols
+.......................
+
+A control symbol is a `\' followed by a non-alphabet symbol.
+Because we know the length of a control symbol is one, we don't need a
+space to signal the end.  Therefore, whitespace after a control symbol
+is significant.
+Starred control symbols are a special type of control symbol.
+For example, `\\*' forces line break that cannot go over a page.
+
+
+File: filename.info,  Node: Character Sequences,  Next: Internal Commands,  Prev: Control Symbols,  Up: Latex Commands
+
+3.1.4.4 Character Sequences
+...........................
+
+Some sequences of characters form an instruction of their own.
+For example:
+   * `ffi' is the `ffi' ligature
+
+   * `!'' is the upside down `!'
+
+
+File: filename.info,  Node: Internal Commands,  Next: Short and Long Commands,  Prev: Character Sequences,  Up: Latex Commands
+
+3.1.4.5 Internal Commands
+.........................
+
+Internal commands are like control words, with an `@' character in the
+name.  They are private to class files and packages.
+
+   `@' takes on special meaning when the file is invoked by
+`\documentclass' or `\usepackage'.
+eg. `\c@section', the internal representation of the section counter
+(in a class file or package), is the command `\c' that takes the
+character `@' as its argument, followed by `section'.
+
+
+File: filename.info,  Node: Short and Long Commands,  Next: Declarations,  Prev: Internal Commands,  Up: Latex Commands
+
+3.1.4.6 Short and Long Commands
+...............................
+
+A long command's argument may contain a paragraph break.
+A short command's argument may not contain a paragraph break.
+Short commands can automatically test for forgotten braces, so are
+preferable cet. par.
+
+File: filename.info,  Node: Declarations,  Next: Arguments,  Prev: Short and Long Commands,  Up: Latex Commands
+
+3.1.4.7 Declarations
+....................
+
+A declaration is a command that affects the document from that point
+onwards.
+Declarations do not themselves produce text, and can generally be
+localised by grouping.
+
+File: filename.info,  Node: Arguments,  Next: Preamble,  Prev: Declarations,  Up: Latex Commands
+
+3.1.4.8 Arguments
+.................
+
+Some commands take mandatory or optional arguments.
+This gives `latex' additional information in order to carry out the
+command.
+The first token (non whitespace) following the command is the first
+argument.  Hence we usually specify the argument as a group.
+An empty (mandatory) argument is specified with {}.
+* Menu:
+
+* mandatory ::
+* optional ::
+* moving fragile ::
+
+
+File: filename.info,  Node: mandatory,  Next: optional,  Up: Arguments
+
+mandatory
+.........
+
+`\footnote' is a control word, taking one mandatory argument, that
+specifies the contents of the footnote.
+`\chapter' is a control word that starts a new chapter, taking the
+chapter name as a mandatory argument.
+
+
+File: filename.info,  Node: optional,  Next: moving fragile,  Prev: mandatory,  Up: Arguments
+
+optional
+........
+
+Optional commands are enclosed in `[]'.
+Commands with both optional and mandatory arguments generally take the
+optional ones first.
+For example, the control symbol `\\' takes an optional argument
+controlling the spacing between the lines: `\\[1pt]'.
+
+File: filename.info,  Node: moving fragile,  Prev: optional,  Up: Arguments
+
+moving fragile
+..............
+
+A moving argument is an argument whose contents are copied to multiple
+parts of the document.
+For example, the arguments to `\section' are moving arguments: they
+appear in both the table of context and at the beginning of the section.
+Commands are considered 'fragile' if they can mess things up when used
+inside a 'moving argument'.
+For example, `\footnote' is a fragile command because when used within
+a moving argument it will cause an error.
+In particular, `\section{Section 1\footnote{test}}' causes problems.
+We can manually fix the error using `\section{Section
+1\protect\footnote{test}}'.
+A robust command is a command that is not fragile.
+
+File: filename.info,  Node: Preamble,  Prev: Arguments,  Up: Latex Commands
+
+3.1.4.9 Preamble
+................
+
+After the `\documentclass[options]{class}' command, and before
+`\begin{document}' (the start of the document environment), we have the
+preamble.
+Most commands must come within the document environment, including all
+commands that generate text (eg `\maketitle').
+Some commands can be within the document or the preamble (eg `\title').
+A few commands can only come within the preamble (eg `\usepackage').
+
+File: filename.info,  Node: Interpretation of Source,  Prev: Latex Commands,  Up: Elementary Knowledge and Vocabulary
+
+3.1.5 Interpretation of Source
+------------------------------
+
+* Menu:
+
+* Grouping ::
+* Whitespace ::
+
+
+File: filename.info,  Node: Grouping,  Next: Whitespace,  Up: Interpretation of Source
+
+3.1.5.1 Grouping
+................
+
+A segment of code may be grouped within `{}'.
+Most commands are local to their group.
+Environments form an implicit scope.
+
+File: filename.info,  Node: Whitespace,  Prev: Grouping,  Up: Interpretation of Source
+
+3.1.5.2 Whitespace
+..................
+
+Anything from `%' up to and including `EOL' is ignored.
+Multiple whitespace is treated as a single whitespace.
+A line consisting of only whitespace is treated as a `\par'.
+Whitespace at the beginning of a line is ignored.
+Hence:
+
+  Foo%
+  Bar
+ Produces:
+
+   `FooBar'
+
+
+File: filename.info,  Node: Document Structure,  Next: environments,  Prev: Elementary Knowledge and Vocabulary,  Up: Basics
+
+3.2 Document Structure
+======================
+
+* Menu:
+
+* Abstract ::
+* Appendix ::
+* Table of Contents ::
+* Bibliography ::
+* Titlepage ::
+* Sectioning ::
+
+
+File: filename.info,  Node: Abstract,  Next: Appendix,  Up: Document Structure
+
+3.2.1 Abstract
+--------------
+
+Abstract   abstracts are created in the abstrac environment   some
+class files dont have an abstract environment   the abstract
+environment should go after the \maketitle command
+
+
+File: filename.info,  Node: Appendix,  Next: Table of Contents,  Prev: Abstract,  Up: Document Structure
+
+3.2.2 Appendix
+--------------
+
+Appendices   start the appendix with \appendix   then use sections
+normally to fill the appendix
+
+
+File: filename.info,  Node: Table of Contents,  Next: Bibliography,  Prev: Appendix,  Up: Document Structure
+
+3.2.3 Table of Contents
+-----------------------
+
+TOC   \tableofcontents   using all the sectioning commands in the
+document                      use it after \maketitle
+  KOMA-Script classes have the optional argument
+toc=graduated(default)|flat   as latex processes source code
+sequentially, it knows not the sectioning when it reads the toc   as
+latex reads the sectioning, it writes a .toc file   when latex reads
+\tableofcontents, it reads in the .toc file   hence, two runs are
+required to fully update the toc
+
+   starred sections need to be manually added to the toc if desired
+the `\addcontentsline{<file format>}{<section unit>}{<text>}' is used
+for this purpose   eg. `\chapter*{Acknowledgements}'
+`\addcontentsline{toc}{chapter}{Acknowledgements}'   chapter arg ~
+\chapter
+
+
+File: filename.info,  Node: Bibliography,  Next: Titlepage,  Prev: Table of Contents,  Up: Document Structure
+
+3.2.4 Bibliography
+------------------
+
+Bibliography   external tools such as bibtex and biber are used to
+automatically generate bibliography environments   their use is covered
+in the next book   for now, lets consider manually creating a
+bibliography environment
+
+
+  \begin{thebibliography}{<widest tag>}
+  \bibitem[<<tag>>]{<unique>}
+  \end{thebibliography}
+
+   depending on the document class, either \bibname prints the word
+Bibliography or \refname prints the word References   thebibliography
+environment automatically invokes either \bibname or \refname to print
+the header, and then prints the bibitems
+
+   most classes dont add bib to TOC   KOMA-Script option
+bibliography=totoc|totocnumbered
+
+   `\cite[<<text>>]{<unique>}' cites the reference
+
+
+File: filename.info,  Node: Titlepage,  Next: Sectioning,  Prev: Bibliography,  Up: Document Structure
+
+3.2.5 Titlepage
+---------------
+
+Titlepage requires at least the following info to be entered:
+`\author{}'   `\title{}'   They can also facilitate more info:
+`\date{}'     if not provided, current date used by default, use empty
+`\date{}' to suppress     KOMA-Script
+
+      \titlehead{}
+      \subject{}
+      \subtitle{}
+      \publishers{}
+   These commands do not print to the document, and hence may be placed
+in the preamble   Useful commands in this context:     `\and'    for
+specifying multiple authors     `\thanks{<text>}'   for a special
+footnote  `<text>' is a moving argument
+
+
+File: filename.info,  Node: Sectioning,  Prev: Titlepage,  Up: Document Structure
+
+3.2.6 Sectioning
+----------------
+
+Chapters, sections, etc.
+
+  \part[<<short title>>]{<<title>>}
+  \chapter[<<short title>>]{<<title>>}
+  \section[<<short title>>]{<<title>>}
+  \paragraph[<<short title>>]{<<title>>}
+  \subparagraph[<<short title>>]{<<title>>}
+
+   the arguments to the above are moving arguments   the \parahraph
+commands are like unnumbered \subsubsubsections   the <<short title>>
+is used in the TOC and page header
+
+   to facilitate consistent font styles for section headers, use
+`\addtokomafont{<element>}{<commands>}'   eg
+`\addtokomafont{section}{\rmfamily\bfseries}'
+
+   KOMA-Script minisec   `\minisec{<heading>}' provides an unnumbered
+independent heading
+
+
+File: filename.info,  Node: environments,  Next: Boxes and Minipages,  Prev: Document Structure,  Up: Basics
+
+3.3 environments
+================
+
+An environment has the following form: `\begin{environment}
+<block>\end{environment}
+'
+The interpretation of the block of code is dependent on the environment.
+Some environments supply commands that may only be used within that
+environment.
+
+File: filename.info,  Node: Boxes and Minipages,  Next: Cross Referencing,  Prev: environments,  Up: Basics
+
+3.4 Boxes and Minipages
+=======================
+
+BOXES AND MINIPAGES   tex view the pages as boxes:    ____
+                   |    |  height
+|____|                                  |____|  depth
+              width   boxes are glued together   ligatures are one box
+ boxes are built out of smaller boxes   the smallest box is for a
+single character
+
+   a tabular environment is a relatively complicated type of box   it
+may be categorised as a horizontal box, because it can be placed inline
+with a line of text   \tabular[<<pos>>]{<column specifiers>}   <<pos>>
+may be tcb, and determines the vertical alignment of the inline box (eg
+bottom aligned)
+
+   a box may not contain a line break   \mbox{<text>} makes a box
+containing <text>, and <text> will not be allowed to span a line break
+
+   the minipage environemtn is another type of inline box
+`\begin{minipage}[<<pos>>][<<height>>]{<width>}'   eg
+`\begin{minipage}[t]{0.4\linewidth}'
+`\parbox[<<pos>>][<<height>>}{<width>}{<text>}' is a corresponding
+block-command, but as it is not an environment, it is more restricted
+than minipage (cannot do footnotes, list environments, etc)
+
+   Framed boxes     `\framebox[<<width>>][<<align-tcb>>]{<text>}'
+treats <text> as a box of width <width> and puts a frame around it
+`\fbox{<text>} ~ \framebox{<text>}'     `\usepackage{fancybox}'
+`\shadowbox{<text>}'       `\doublebox{<text>}'       `\ovalbox{<text>}'
+     `\Ovalbox{<text>}'     advanced graphical frames, pgf, tikz
+
+
+File: filename.info,  Node: Cross Referencing,  Next: Multilingual Support,  Prev: Boxes and Minipages,  Up: Basics
+
+3.5 Cross Referencing
+=====================
+
+Cross-referencing   `\label{<unique>}' should be placed at the point
+you want to label   `\ref{<unique>}' is then used to refer to the
+chapter/section number containing the label   `\pageref{<unique>}' is
+used to refer to the page containing the label
+
+   Note: dont start a line with a number - use unbreakable space -
+Section~\ref{sec:results}
+
+   You can use labels and refs within an enunmerate environment to
+refer to steps in the numbered list
+
+   similar to TOC, the refs may be invoked before the labels   latex
+reads from the .aux file, needs two runs   undefined refs show up as ??
+in output   if you get an 'undefined reference' warning on a re-run,
+then you have used a \ref to a \label that does not exist
+
+   rare situations involving cross referencing and TOCs can require
+three runs   latexmk is a perl script that runs latex the required
+number of times
+
+
+File: filename.info,  Node: Multilingual Support,  Prev: Cross Referencing,  Up: Basics
+
+3.6 Multilingual Support
+========================
+
+Multi-lingual support
+
+   `\usepackage[french, english]{babel}'    last in list is the default
+ `\selectlanguage{<language>}'   `\begin{otherlanguage}{<language>}'
+`\foreignlanguage{spanish}{<text>}'    use if only a short section of a
+different lagnuage needed   `\iflanguage{english}{language is
+english}{language is not english}'     check which language we are using
+
+
+File: filename.info,  Node: Intermediate,  Prev: Basics,  Up: Top
+
+4 Intermediate
+**************
+
+* Menu:
+
+* Details ::
+* Page style and numbering ::
+* Line breaks ::
+* Fonts ::
+
+
+File: filename.info,  Node: Details,  Next: Page style and numbering,  Up: Intermediate
+
+4.1 Details
+===========
+
+* Menu:
+
+* accents ::
+* inter-secntence-spacing ::
+* special-characters ::
+* italic-correction ::
+* ligatures-and-kerning ::
+
+
+File: filename.info,  Node: accents,  Next: inter-secntence-spacing,  Up: Details
+
+4.1.1 accents
+-------------
+
+
+\'`^"utdr=.~vHcb{<object>}  m.a. of length 1
+ inputenc and fontenc packages can be used to enable typing accents
+directly. but it is more hassle than it is worth for me
+
+
+File: filename.info,  Node: inter-secntence-spacing,  Next: special-characters,  Prev: accents,  Up: Details
+
+4.1.2 inter-secntence-spacing
+-----------------------------
+
+french spacing uses 1 standard space
+english spacing uses 1 en-space (slightly larger than 1 standard space)
+tex defaults to english, which is better
+\frenchspacing \nonfrenchspacing  declare toggle french spacing
+if we have a . ? or !, but it is not at the end of a sentence, then we
+must escape the en space
+eg  e.g.\ like this
+if a we have a capital letter followed by . ? or !, latex assumes it is
+not the end of the sentence, so we must escape it
+eg Yesterday, I saw my G.P\@.
+Note: in a typewriter font, \nonfrenchspacing uses a double-space to
+simulate the en space
+
+File: filename.info,  Node: special-characters,  Next: italic-correction,  Prev: inter-secntence-spacing,  Up: Details
+
+4.1.3 special-characters
+------------------------
+
+Special characters
+
+  {}%$&_#^~\
+  \textbackslash
+  \textasciicircum
+  \textasciitilde
+  \pounds
+  \textregistered
+  \texttrademark
+  \copyright
+  \textbullet
+  \textquestiondown ?`
+  \textexclamdown !`
+  \textemdash ---
+  \textendash --
+  \textunderscore \_
+  \textperiodcentered
+  \ldots
+  \slash /  (Note / wont allow line break at / but \slash will)
+  \${}#%&
+  \i
+  \j
+  \S  section symbol
+  \P  paragraph symbol
+  \dag
+  \ddag
+  \textgreater  (in math mode < > and | are verbatim, in text mode, it varies)
+  \textbar
+  \textquoteright '
+  \textquotedblleft ``
+  texdoc symbols
+
+
+File: filename.info,  Node: italic-correction,  Next: ligatures-and-kerning,  Prev: special-characters,  Up: Details
+
+4.1.4 italic-correction
+-----------------------
+
+Slanted font declarations may benefit from an italic correction \/ at
+the end of their block   Especially noticeable of part of a word is
+stressed by being slanted
+
+
+File: filename.info,  Node: ligatures-and-kerning,  Prev: italic-correction,  Up: Details
+
+4.1.5 ligatures-and-kerning
+---------------------------
+
+
+man\oe uvre
+man\oe{}uvre
+man{\oe}uvre (not recommended - can affect kerning)
+
+\ae, \oe, \aa, \l, \o, \ss, fi, ffi, fl, ffl
+
+
+File: filename.info,  Node: Page style and numbering,  Next: Line breaks,  Prev: Details,  Up: Intermediate
+
+4.2 Page style and numbering
+============================
+
+Page Styles and Numbering
+`\pagenumbering{arabic|roman|Roman|alph|Alph}'   modal command   the
+scrbook class provides `\frontmatter' `\mainmatter' and `\backmatter'
+declarations, which swich formatting for books
+
+   `\pagestyle{empty|plain|headings|myheadings}'   `\thispagestyle{...}'
+ `\markboth{<left-head>}{<right-head>}'   if class has 'two-side'
+option  -  allows seperate style for odd and even pages
+`\markright{<right-head>}'               if class has 'one-side' option
+
+
+File: filename.info,  Node: Line breaks,  Next: Fonts,  Prev: Page style and numbering,  Up: Intermediate
+
+4.3 Line breaks
+===============
+
+Hyphenation line breaks   tex has an excellent hyphenation algo
+designed for english
+use babel package for foreign language hyphenation algos
+if tex needs help to find a good hyphenation, we can provide this as
+1. \hyphenation{gal-axy}
+2. gal\-axy
+
+File: filename.info,  Node: Fonts,  Prev: Line breaks,  Up: Intermediate
+
+4.4 Fonts
+=========
+
+Fonts
+
+   Appearence determined by: family, shape, series/weight Computer
+Modern font families (Knuth) used in text mode: (sans-)serif, typewriter
+
+   Changing font
+
+   Modal commands:   \rmfamily \sffamily \ttfamily    \mdseries
+\bfseries    \upshape \itshape \slshape \scshape    \em      \normalfont
+Token commands:   \textrm   \textsf   \texttt      \textmd   \textbf
+ \textup  \textit  \textsl  \textsc     \emph    \textnormal   single
+mandatory argument     \textrm test   affects token t     \textrm
+{test} affects token {test} Modal commands expect an no argument
+
+   Note:   \bf \md \it \sl \sc \sf \tt \rm are deprecated in favour of
+less troublesome alternatives
+
+   \normalfont sets family, series and shape to default \em toggles
+between \upshape and \slshape
+
+   font size   base font size for document is 11pt KOMA-Script default
+then the following declarations (with no corresponding block commands)
+can set the relative font size     \tiny \scriptsize \footnotesize
+\small \normalsize \large \Large \LARGE \huge \HUGE   corresponding
+environments \begin{small}<text>\end{small} == {\small <text>}   font
+environments may be nested
+
+   Changing default document fonts   documents have three fonts: rm,
+sf, tt   the default computer modern fonts are used   we can load
+packages to change them:     mathptmx changes rm     helvet changes sf
+  courier changes tt   the default font family is rm   Helvetica is
+larger than Times so if we use \usepackage{mathptmx} we should use
+\usepackage[scaled=0.9]{helvet}   For more fonts: The LATEX font
+catalogue. http://www.tug.dk/FontCatalogue/.
+
+
+
+Tag Table:
+Node: Top73
+Node: Error Messages207
+Node: Introduction607
+Node: Compilation809
+Node: CTAN992
+Node: Documentation1246
+Node: Further Resources1521
+Node: Basics1939
+Node: Elementary Knowledge and Vocabulary2215
+Node: File Types2526
+Node: Class File2742
+Node: Style File2994
+Node: Main3402
+Node: source3559
+Node: output3798
+Node: DVI4084
+Node: Helper4416
+Node: aux4633
+Node: synctex4808
+Node: log4978
+Node: toc5063
+Node: lot5144
+Node: Development Environments5213
+Node: vim5458
+Node: Emacs5563
+Node: Front-End5690
+Node: CL Commands5984
+Node: Latex Commands6273
+Node: Modal-vs-Token6764
+Node: Control Words7533
+Node: Control Symbols7781
+Node: Character Sequences8295
+Node: Internal Commands8618
+Node: Short and Long Commands9210
+Node: Declarations9605
+Node: Arguments9930
+Node: mandatory10436
+Node: optional10744
+Node: moving fragile11110
+Node: Preamble11869
+Node: Interpretation of Source12387
+Node: Grouping12611
+Node: Whitespace12859
+Node: Document Structure13256
+Node: Abstract13541
+Node: Appendix13834
+Node: Table of Contents14071
+Node: Bibliography14968
+Node: Titlepage15837
+Node: Sectioning16533
+Node: environments17301
+Node: Boxes and Minipages17689
+Node: Cross Referencing19274
+Node: Multilingual Support20310
+Node: Intermediate20824
+Node: Details21005
+Node: accents21247
+Node: inter-secntence-spacing21532
+Node: special-characters22278
+Node: italic-correction23035
+Node: ligatures-and-kerning23369
+Node: Page style and numbering23644
+Node: Line breaks24295
+Node: Fonts24685
+
+End Tag Table

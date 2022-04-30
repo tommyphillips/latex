@@ -1,0 +1,10 @@
+Page Styles and Numbering
+  @code{\pagenumbering@{arabic|roman|Roman|alph|Alph@}}   modal command
+  the scrbook class provides @code{\frontmatter} @code{\mainmatter} and @code{\backmatter} declarations, which swich formatting for books
+
+  @code{\pagestyle@{empty|plain|headings|myheadings@}}
+  @code{\thispagestyle@{...@}}
+  @code{\markboth@{<left-head>@}@{<right-head>@}}   if class has 'two-side' option  -  allows seperate style for odd and even pages
+  @code{\markright@{<right-head>@}}               if class has 'one-side' option
+
+

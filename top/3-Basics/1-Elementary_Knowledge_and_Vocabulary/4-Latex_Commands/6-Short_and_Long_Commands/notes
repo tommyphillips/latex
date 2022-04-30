@@ -1,0 +1,3 @@
+A long command's argument may contain a paragraph break.@*
+A short command's argument may not contain a paragraph break.@*
+Short commands can automatically test for forgotten braces, so are preferable cet. par.@*

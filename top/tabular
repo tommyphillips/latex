@@ -1,0 +1,43 @@
+ENVIRONMENTS
+
+
+TABULAR
+Tabular environment for aligning rows and columns
+  \begin{tabular}[<<pos - see S4.7>>]{<column specifies>}
+  for each column there must be a specifier, hence the specifiers determine number of cols: rlcTEX font catalogue. http://www.tug.dk/FontCatalogue/.
+  rlc specifiers dont allow line breaks in a cell
+  p{<width>} indicates a paragraph cell
+  >{<text or declaration>}c inserts <text or declaration> at start of each cell in that column
+  \tabularnewline is a column line break    \\ can be used instead but if we have a paragraph cell, it will put a line break in that cell
+
+Inter column spacing
+  the \tabcolsep length register specifies the gap between each column cell and their dividing lines (eg between adjacent cells, the gap is applied twice, once by each cell, but at the edge it is only applied once)
+  use @{<text>} between the column specifiers to insert <text> between those columns in the table (overrides and replaces the \tabcolsep)
+
+  \begin{tabular}{lll@{\hspace{2\tabcolsep}}lll}     this is equivalent of {llllll}
+
+Column and row separation
+  \\[<vertical space>]  or \tabularnewline[<vertical space>]
+  if \\ used when \tabularnewline needed:     ! Extra alignment tab has been changed to \cr. <recently read> \endtemplate
+
+  each element in a table is implicitly grouped (scope)
+
+  hacky way to align on decimal point: {lr@{.}l}
+
+Spanning Columns
+  \multicolumn{<no. cols spanned>}{<col specifier>}{<<text>>}
+  \multicolumn{1}{<col specifier>}{<<text>>} can be used to override the col specifier for a single cell
+
+Rules
+  rules in tables should be used sparingly
+  \usepackage{booktabs}
+  \(top|mid|bottom)rule[<<width>>]   default width for top|bottom  is length register \heavyrulewidth, mid ~ \lightrulewidth
+  these commands go at the start of the appropriate row
+  i think it is good practise to include \tabularnewline at the end of every line incl. the last
+  \bottomrule has its own line after bottom
+ 
+
+
+
+
+

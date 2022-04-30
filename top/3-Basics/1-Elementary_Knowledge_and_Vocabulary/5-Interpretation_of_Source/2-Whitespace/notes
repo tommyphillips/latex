@@ -1,0 +1,15 @@
+Anything from @code{%} up to and including @code{EOL} is ignored.@*
+Multiple whitespace is treated as a single whitespace.@*
+A line consisting of only whitespace is treated as a @code{\par}.@*
+Whitespace at the beginning of a line is ignored.@*
+
+Hence: 
+@verbatim
+  Foo%
+  Bar    
+@end verbatim
+Produces:
+
+@code{FooBar}
+
+

@@ -1,0 +1,12 @@
+LIST
+List environments: enumerate, itemize, description
+  \item[<<override marker>>]{<<text>>}  --  {} are optional
+  if the <<override marker>> or the start of the item contains [] then use grouping eg. \item[{[X]}]
+  each \item start a new paragraph 
+  most classes allow list nesting depth 4 before returning a "too deeply nested" error
+  
+  description provides no marker by default
+  no nesting limit
+  in a KOMA-Script class, can change the font of description markers using \addtokomafont{descriptionlabel}{\normalfont\scshape}
+                                 
+

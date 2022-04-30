@@ -1,0 +1,7 @@
+After the @code{\documentclass[options]@{class@}} command,
+and before @code{\begin@{document@}} (the start of the document environment),
+we have the preamble.@*
+
+Most commands must come within the document environment, including all commands that generate text (eg @code{\maketitle}).@*
+Some commands can be within the document or the preamble (eg @code{\title}).@*
+A few commands can only come within the preamble (eg @code{\usepackage}).@*

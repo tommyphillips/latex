@@ -1,0 +1,32 @@
+Special characters
+@verbatim
+  {}%$&_#^~\
+  \textbackslash 
+  \textasciicircum
+  \textasciitilde
+  \pounds
+  \textregistered
+  \texttrademark
+  \copyright
+  \textbullet
+  \textquestiondown ?` 
+  \textexclamdown !`  
+  \textemdash --- 
+  \textendash --
+  \textunderscore \_
+  \textperiodcentered
+  \ldots
+  \slash /  (Note / wont allow line break at / but \slash will)
+  \${}#%&
+  \i
+  \j
+  \S  section symbol
+  \P  paragraph symbol
+  \dag
+  \ddag
+  \textgreater  (in math mode < > and | are verbatim, in text mode, it varies)
+  \textbar 
+  \textquoteright ' 
+  \textquotedblleft ``
+  texdoc symbols
+@end verbatim

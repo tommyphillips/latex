@@ -1,0 +1,17 @@
+Cross-referencing
+  @code{\label@{<unique>@}} should be placed at the point you want to label
+  @code{\ref@{<unique>@}} is then used to refer to the chapter/section number containing the label
+  @code{\pageref@{<unique>@}} is used to refer to the page containing the label
+ 
+  Note: dont start a line with a number - use unbreakable space - Section~\ref@{sec:results@}
+
+  You can use labels and refs within an enunmerate environment to refer to steps in the numbered list
+  
+  similar to TOC, the refs may be invoked before the labels
+  latex reads from the .aux file, needs two runs
+  undefined refs show up as ?? in output
+  if you get an 'undefined reference' warning on a re-run, then you have used a \ref to a \label that does not exist
+
+  rare situations involving cross referencing and TOCs can require three runs
+  latexmk is a perl script that runs latex the required number of times
+

@@ -1,0 +1,10 @@
+Packages (@file{.sty} files) (re)define commands
+
+Packages are imported via: @code{\usepackage[<<options>>]@{<package>@}}@*
+Applicable class options will also be passed to the package
+
+To learn about new packages, @pxref{Documentation}.@*
+To download and install packages, <Ref Appdx A>.@*
+
+
+

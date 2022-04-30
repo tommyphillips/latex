@@ -1,0 +1,4 @@
+A segment of code may be grouped within @code{@{@}}.@*
+Most commands are local to their group.@*
+Environments form an implicit scope.@*
+

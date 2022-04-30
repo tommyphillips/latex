@@ -1,0 +1,13 @@
+Creating a simple document
+
+Anatomy
+  every document begins with @code{\documentclass[<options>]@{<class name>@}}
+  the contents of the document goes within the document environment
+  everything after @code{\end@{document@}} is ignored
+  before the document environment, we can declare custom commands we will use. 
+  Such commands can be imported from other files via usepackage
+
+
+
+
+

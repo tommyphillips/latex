@@ -1,0 +1,2 @@
+source code -> @code{pdflatex} -> @file{.pdf}@* 
+source code -> @code{latex2html} -> @code{.html}@*

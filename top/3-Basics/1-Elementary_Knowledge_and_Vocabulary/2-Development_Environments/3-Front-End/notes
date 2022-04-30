@@ -1,0 +1,9 @@
+A front-end is a piece of software that provides facilities for:
+
+@itemize
+@item writing source code
+@item passing source code to a latex application
+@item viewing the output file
+@end itemize
+
+

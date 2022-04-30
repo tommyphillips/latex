@@ -1,0 +1,11 @@
+A moving argument is an argument whose contents are copied to multiple parts of the document.@*
+For example, the arguments to @code{\section} are moving arguments: 
+they appear in both the table of context and at the beginning of the section.@*
+
+Commands are considered 'fragile' if they can mess things up when used inside a 'moving argument'.@*
+For example, @code{\footnote} is a fragile command because when used within a moving argument it will cause an error.@*
+
+In particular, @code{\section@{Section 1\footnote@{test@}@}} causes problems.@*
+We can manually fix the error using @code{\section@{Section 1\protect\footnote@{test@}@}}.@*
+
+A robust command is a command that is not fragile.@*

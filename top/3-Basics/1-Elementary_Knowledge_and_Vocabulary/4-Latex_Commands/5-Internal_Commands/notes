@@ -1,0 +1,6 @@
+Internal commands are like control words, with an @code{@@} character in the name.
+They are private to class files and packages.
+
+@code{@@} takes on special meaning when the file is invoked by @code{\documentclass} or @code{\usepackage}.@*
+eg. @code{\c@@section}, the internal representation of the section counter (in a class file or package),
+is the command @code{\c} that takes the character @code{@@} as its argument, followed by @code{section}.

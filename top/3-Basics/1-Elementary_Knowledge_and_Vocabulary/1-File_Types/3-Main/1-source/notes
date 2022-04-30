@@ -1,0 +1,2 @@
+The source code refers to all the text (including latex commands) that make up a document, saved with extension @file{.tex}.@*
+This may be split across several files.@*
