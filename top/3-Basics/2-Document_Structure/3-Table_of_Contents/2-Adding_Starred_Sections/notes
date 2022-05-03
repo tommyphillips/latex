@@ -1,0 +1,3 @@
+starred sections must be manually added to the @file{.toc}.@*
+This can be done from the @file{.tex} using:
+@code{\addcontentsline@{toc@}@{<section unit - eg chapter>@}@{<text>@}}.

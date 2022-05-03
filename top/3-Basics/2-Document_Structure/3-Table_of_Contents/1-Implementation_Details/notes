@@ -1,0 +1,4 @@
+@code{latex} processes source code sequentially, hence it reads the @code{\tableofcontents} command before reading all sections.@*
+While reading sections, @code{latex} writes to @file{.toc}.@*
+When @code{latex} reads @code{\tableofcontents}, it reads in @file{.toc}.@*
+Hence, two runs are required to fully update toc.

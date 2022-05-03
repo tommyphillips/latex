@@ -1,4 +1,4 @@
 An environment has the following form:
-@code{\begin@{environment@} <block>\end@{environment@}@*}@*
-The interpretation of the block of code is dependent on the environment.@*
+@code{\begin@{environment@}<block>\end@{environment@}@*}@*
+The interpretation of @code{<block>} depends on the environment.@*
 Some environments supply commands that may only be used within that environment.@*

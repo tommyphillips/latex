@@ -1,17 +1,11 @@
-@code{tex} views a page as a box.
-Boxes are built out of smaller boxes glued together.@*
+@code{tex} views a page as a box, built out of smaller boxes glued together.@*
+
+A box may not contain a line break. Therefore:@*
+@code{\mbox@{<text>@}} makes a box containing @code{<text>,} 
+and @code{<text>} may not span a line break.
 
 
-* Boxes and line breaks
-
-a box may not contain a line break
-\mbox@{<text>@} makes a box containing <text>, and <text> will not be allowed to span a line break
-
-
-
-* Character boxes
-
-The smallest box is for a single character:
+The smallest box is for a single character (including a ligature):
 @verbatim
    ____
   |    |  height
@@ -21,40 +15,41 @@ The smallest box is for a single character:
 @end verbatim
 
 
-
-Note: ligatures get a single character box
-
-
-* Horizontal boxes
 Horizontal boxes are boxes that can be placed inline with a line of text.
 
 
-
-
-* Tabular environment
-
-  a tabular environment is a relatively complicated type of box
-  it may be categorised as a horizontal box
-  @code{\tabular[<<pos>>]@{<column specifiers>@}}
-  @code{<<pos>>} determines the vertical alignment (@code{t|c|b}) of the inline box
+A tabular environment is a relatively complicated type of horizontal box.@*
+See tabular environment.@*
+@code{\tabular[<<pos>>]@{<column specifiers>@}}
+@code{<<pos>>} determines the vertical alignment (@code{t|c|b}) of the inline box
     
 
-* minipage environment
-  the minipage environemtn is another type of inline box
-  @code{\begin@{minipage@}[<<pos>>][<<height>>]@{<width>@}}
-  eg @code{\begin@{minipage@}[t]@{0.4\linewidth@}}
-  @code{\parbox[<<pos>>][<<height>>@}@{<width>@}@{<text>@}} is a corresponding block-command, but as it is not an environment, it is more restricted than minipage (cannot do footnotes, list environments, etc)
+A minipage environemtn is another type of inline box.@*
+see minipage environment.@*
+
+@code{\begin@{minipage@}[<<pos>>][<<height>>]@{<width>@}}@*
+@code{\begin@{minipage@}[t]@{0.4\linewidth@}}  (example)@*
+
+Note:@*
+@code{\parbox[<<pos>>][<<height>>@}@{<width>@}@{<text>@}} @*
+is a block-command with a similar effect to @code{minipage}.@*
+As it is not an environment, it is more restricted than minipage.@*
+For example, it cannot do footnotes, list environments, etc.
 
 
-* framed boxes
+Framed boxes
 
-  Framed boxes
-    @code{\framebox[<<width>>][<<align-tcb>>]@{<text>@}}  treats <text> as a box of width <width> and puts a frame around it
-    @code{\fbox@{<text>@} ~ \framebox@{<text>@}}
-    @code{\usepackage@{fancybox@}}
-      @code{\shadowbox@{<text>@}}
-      @code{\doublebox@{<text>@}}
-      @code{\ovalbox@{<text>@}}
-      @code{\Ovalbox@{<text>@}}
-    advanced graphical frames, pgf, tikz
+@code{\framebox|fbox[<<width>>][<<align-tcb>>]@{<text>@}}  treats <text> as a box of width <width> and puts a frame around it.@*
 
+Fancy boxes:
+@itemize
+@item  package @code{fancybox}
+  @itemize
+    @item @code{\shadowbox@{<text>@}}
+    @item @code{\doublebox@{<text>@}}
+    @item @code{\ovalbox@{<text>@}}
+    @item @code{\Ovalbox@{<text>@}}
+  @end itemize
+@item package @code{pgf}
+@item package @code{tikz}
+@end itemize

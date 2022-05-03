@@ -1,4 +1,3 @@
-Chapters, sections, etc.
 @verbatim
   \part[<<short title>>]{<<title>>}
   \chapter[<<short title>>]{<<title>>}
@@ -7,13 +6,16 @@ Chapters, sections, etc.
   \subparagraph[<<short title>>]{<<title>>}
 @end verbatim
 
-  the arguments to the above are moving arguments
-  the \parahraph commands are like unnumbered \subsubsubsections 
-  the <<short title>> is used in the TOC and page header
 
-  to facilitate consistent font styles for section headers, use @code{\addtokomafont@{<element>@}@{<commands>@}}
-  eg @code{\addtokomafont@{section@}@{\rmfamily\bfseries@}}
+Note:@enumerate
+@item @code{\parahraph} is like an unnumbered @code{\subsubsubsections}. 
+@item arguments to the above are moving arguments
+@item @code{<short title>} is used in the TOC and page header
+@end enumerate
 
-KOMA-Script minisec
-  @code{\minisec@{<heading>@}} provides an unnumbered independent heading
+For consistency of font styles for sectioning headers, use:@*
+@code{\addtokomafont@{<sectioning type>@}@{<commands>@}}.@*
+@code{\addtokomafont@{section@}@{\rmfamily\bfseries@}} (example)
+
+KOMA-Script @code{\minisec@{<heading>@}} provides an unnumbered independent heading.
 

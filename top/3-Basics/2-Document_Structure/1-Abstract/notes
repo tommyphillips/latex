@@ -1,5 +1,2 @@
-Abstract
-  abstracts are created in the abstrac environment
-  some class files dont have an abstract environment
-  the abstract environment should go after the \maketitle command
-
+Abstracts are created in the @code{abstract} environment, which many classes have.@*
+This should be placed after the @code{\maketitle} command.

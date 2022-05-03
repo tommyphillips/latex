@@ -1,17 +1,24 @@
-Titlepage requires at least the following info to be entered:
-  @code{\author@{@}}
-  @code{\title@{@}}
-  They can also facilitate more info:
-    @code{\date@{@}}     if not provided, current date used by default, use empty @code{\date@{@}} to suppress
-    KOMA-Script
+To form a titlepage, @code{Latex} requires at least @code{\author@{@}}, and 
+@code{\title@{@}} to be entered.@*
+
+Additional information can be entered, such as @code{\date@{@}}.@*
+Use empty @code{\date@{@}} to suppress using the current date as default.
+
+KOMA-Script titlepage information entry commands:
 @verbatim
-      \titlehead{}
-      \subject{}
-      \subtitle{}
-      \publishers{}
+  \titlehead{}
+  \subject{}
+  \subtitle{}
+  \publishers{}
 @end verbatim
-  These commands do not print to the document, and hence may be placed in the preamble
-  Useful commands in this context:
-    @code{\and}    for specifying multiple authors
-    @code{\thanks@{<text>@}}   for a special footnote  @code{<text>} is a moving argument
+
+Note:@*
+Information supplying commands do not print to the document, 
+and hence may be placed in the preamble
+
+Useful titlepage commands:
+@itemize
+  @item @code{\and}    for specifying multiple authors
+  @item @code{\thanks@{<text>@}}   for a special footnote  @code{<text>} is a moving argument
+@end itemize
 

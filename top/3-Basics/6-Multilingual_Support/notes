@@ -1,8 +1,10 @@
-Multi-lingual support
+@code{\usepackage[french, english]@{babel@}}    last in list is the default.@*
+@code{\selectlanguage@{<language>@}}@*
+@code{\begin@{otherlanguage@}@{<language>@}}@*
 
-  @code{\usepackage[french, english]@{babel@}}    last in list is the default
-  @code{\selectlanguage@{<language>@}}
-  @code{\begin@{otherlanguage@}@{<language>@}}
-  @code{\foreignlanguage@{spanish@}@{<text>@}}    use if only a short section of a different lagnuage needed
-  @code{\iflanguage@{english@}@{language is english@}@{language is not english@}}     check which language we are using
+If only a short section of a foreign lagnuage needed:@*
+@code{\foreignlanguage@{spanish@}@{<text>@}}  
+
+Check which language is active:@*
+@code{\iflanguage@{english@}@{language is english@}@{language is not english@}}
 

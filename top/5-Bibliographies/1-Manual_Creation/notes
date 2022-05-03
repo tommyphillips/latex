@@ -1,0 +1,18 @@
+To manually create a bibliography environment,
+
+@verbatim
+  \begin{thebibliography}{<widest tag>}
+  \bibitem[<<tag>>]{<unique>}
+  \end{thebibliography}
+@end verbatim
+
+Depending on the document class, either @code{\bibname} prints `Bibliography'
+or @code{\refname} prints `References'.@*
+@code{thebibliography} environment automatically invokes either @code{\bibname} or @code{\refname}, and then prints the bibitems.@*
+
+@code{\cite[<<text>>]@{<unique>@}} cites the reference.
+
+Most classes dont add the bibliography to the TOC.@*
+KOMA-Script classes have the option @code{bibliography=totoc|totocnumbered}.@*
+
+
